@@ -20,7 +20,7 @@
 
     /*HEADER.LOGO SECTION*/
     .logoSection{
-      width:200px;
+      width:220px;
       display:flex;
       align-items: center;
       justify-content: space-between;
@@ -36,8 +36,9 @@
 
     .logoSection h3{
 
-      font-size:1.4em;
-
+      font-size:1.9em;
+      margin:0;
+      font-weight:500;
     }
 
     /*HEADER.LOGIN & SEARCH SECTION*/

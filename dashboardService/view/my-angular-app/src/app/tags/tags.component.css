@@ -1,0 +1,52 @@
+  .tagInputContainer{
+    display:flex;
+    align-items: center;
+    gap:3%;
+    width:90%;
+    margin:auto;
+  }
+
+  .tagInputContainer h2{
+  font-weight:bold;
+  margin:0;
+  color:#403E6D;
+  }
+
+  .tagInputContainer input{
+
+      height:30px;
+      width:230px;
+      border-radius:5px;
+      padding: 5px 10px;
+      border: 2px solid #E0E0E0;
+  }
+
+  .tagsIcons{
+    display:flex;
+    width:90%;
+    margin:auto;
+    gap:5%;
+  }
+
+  .tagsIcons p{
+    margin: 1em 0;
+    border-radius: 10px;
+    background-color: #9673BB;
+    color:white;
+    padding: 5px 5px 5px 20px;
+  }
+
+  .tagsIcons p span{
+    cursor:pointer;
+    margin-bottom:10px;
+    margin-left:10px;
+  }
+
+  .tagsIcons p:hover{
+      background-color: #D3C4E3;
+      color:#403E6D;
+  }
+
+   .tagsIcons p span:hover{
+    color:red;
+   }

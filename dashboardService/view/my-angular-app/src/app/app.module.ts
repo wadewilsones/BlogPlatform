@@ -8,13 +8,15 @@ import { PostsComponent } from './singlePost/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { SideComponent } from './side/side.component';
+import { TagsComponent } from './tags/tags.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     HeaderComponent,
-    SideComponent
+    SideComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
