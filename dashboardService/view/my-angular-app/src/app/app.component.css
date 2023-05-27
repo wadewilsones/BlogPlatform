@@ -1,89 +1,25 @@
 
 
 /**DESKTOP**/
-header{
-  background-color:#323232;
-  color:white;
+/**POST CONTAINER**/
+@media screen and (min-width:800px){
+    .postFeed{
+      width: 650px;
+      margin:auto;
+      padding:2em;
+      background-color:#F5F5F5;
+    }
+
+}
+
+/*PHONE VIEW*/
+@media screen and (max-width:799px){
+.postFeed{
+  width: 100%;
+  margin:auto;
   padding:1em 0;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-family:Inter
+  background-color:#F2F2F2;
 }
-
-
-/*HEADER.LOGO SECTION*/
-.logoSection{
-  width:200px;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logoSection .logo{
-  width:40px;
-  height:40px;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.logoSection h3{
-
-  font-size:1.4em;
 
 }
 
-/*HEADER.LOGIN & SEARCH SECTION*/
-
-.searchSection{
-  display: flex;
-  justify-content:space-between;
-  align-items:center;
-  width:500px;
-}
-
-.searchSection form input[type="search"]{
-  height:30px;
-  width:230px;
-  border-radius:5px;
-  padding: 5px 10px;
-  margin-right:10px;
-
-}
-
-.searchSection form input[type="submit"]{
-  padding:8px 25px;
-  color:white;
-  font-weight:bold;
-  background-color: #9673BB;
-  cursor:pointer;
-  border-radius: 5px;
-}
-
-/*LOGIN*/
-
-.loginContainer{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-}
-
-.loginIcon{
-  background-color: #9673BB;
-  padding: 5px 10px 5px 5px;
-  border-radius: 10px;
-  color:white;
-  font-size:1.6em;
-  cursor:pointer;
-  margin-right:0.4em;
-}
-
-.loginContainer h5{
-
-  text-align:center;
-  font-size:1em;
-  cursor:pointer;
-}
