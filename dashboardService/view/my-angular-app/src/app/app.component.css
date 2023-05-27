@@ -1,13 +1,38 @@
 
-
 /**DESKTOP**/
 /**POST CONTAINER**/
 @media screen and (min-width:800px){
+
+    .homeCointainer{
+      background-color:white;
+      display:flex;
+      width:80%;
+      margin:auto;
+      background-color:#F2F2F2;
+    }
+
     .postFeed{
       width: 650px;
       margin:auto;
       padding:2em;
       background-color:#F5F5F5;
+    }
+
+    /*SIDE POSTS*/
+
+    aside{
+      width:20%;
+      margin-left:50px;
+      padding:2em;
+      background-color:white;
+
+    }
+
+    aside h2{
+      text-align:center;
+      margin:5em 0 2em;
+      color:#403E6D;
+      font-weight:bold;
     }
 
 }

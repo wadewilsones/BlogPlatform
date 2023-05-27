@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './singlePost/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { SideComponent } from './side/side.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideComponent
   ],
   imports: [
     BrowserModule,

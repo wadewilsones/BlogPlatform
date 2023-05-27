@@ -1,10 +1,17 @@
-<app-header></app-header>
-<section class="postFeed">
-  <app-posts></app-posts>
-  <app-posts></app-posts>
-  <app-posts></app-posts>
-</section>
+ <app-header></app-header>
+   <main class="homeCointainer">
+    <aside class="sidePosts">
+      <h2>POPULAR POSTS</h2>
+      <app-side></app-side>
+      <app-side></app-side>
+    </aside>
 
+    <section class="postFeed">
+      <app-posts></app-posts>
+      <app-posts></app-posts>
+      <app-posts></app-posts>
+    </section>
+  </main>
 
 <router-outlet></router-outlet>
 

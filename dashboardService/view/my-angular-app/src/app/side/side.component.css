@@ -1,0 +1,47 @@
+.singleSidePost{
+  width:90%;
+  margin: 0 auto 2em;
+  padding:10px 20px;
+  border-radius:10px;
+  background-color:#F2F2F2;
+}
+
+.singleSidePost img{
+  margin:0;
+  width:100%;
+  object-fit:contain;
+}
+
+.postContent p{
+  margin: 1em auto;
+
+}
+
+.singleSidePost .postContent h1{
+
+  font-size:2em;
+  line-height:3;
+  font-weight:500;
+  margin:0;
+}
+
+/**TAGS and READ MORE BTN**/
+    .postTags{
+         display:flex;
+         gap:5%;
+     }
+
+    .postTags p{
+      background-color:#9673BB;
+      padding:0.6em 1em;
+      color:white;
+      cursor:pointer;
+      border-radius:10px;
+    }
+
+    .postTags p:hover{
+       background-color:#D3C4E3;
+       color:black;
+    }
+
+
