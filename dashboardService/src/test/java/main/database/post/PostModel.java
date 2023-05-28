@@ -15,14 +15,15 @@ public class PostModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // set up auto incrementing
     private int postId;
     private String postTitle;
-    private String content;
+    @Column(columnDefinition = "text")
+    private String post_content;
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "date_created", updatable = false)
+    @Column(name = "date_created", updatable = false, insertable = false)
     @CreationTimestamp
     private Date createdDate;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "date_created", updatable = true)
+    @Column(name = "date_created", insertable = false, updatable = true)
     @CreationTimestamp
     private Date updatedDate;
     private int authorId;
@@ -30,11 +31,12 @@ public class PostModel {
     private Blob pic;
 
 
-    //Constructor
+    //Constructors
+    public PostModel(){}
     public PostModel(String postTitle, String content, int authorId, Blob pic){
 
         this.postTitle = postTitle;
-        this.content = content;
+        this.post_content = content;
         this.authorId = authorId;
         this.pic = pic;
 
@@ -60,7 +62,7 @@ public class PostModel {
     }
 
     public String getContent() {
-        return content;
+        return post_content;
     }
 
     public Date getUpdatedDate() {
@@ -85,7 +87,7 @@ public class PostModel {
     }
 
     public void setContent(String content) {
-        this.content = content;
+        this.post_content = content;
     }
 
     public void setPic(Blob pic) {

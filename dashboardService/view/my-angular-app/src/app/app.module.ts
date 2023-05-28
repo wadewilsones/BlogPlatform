@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { TagsComponent } from './tags/tags.component';
     TagsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     MatIconModule,
     AppRoutingModule,

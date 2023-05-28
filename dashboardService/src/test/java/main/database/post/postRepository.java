@@ -11,6 +11,6 @@ import java.util.List;
 public interface postRepository extends JpaRepository<PostModel, Integer>{
 
     /**Get all Posts**/
-    static List<PostModel> findAll();
+     List<PostModel> findAll();
 
 }

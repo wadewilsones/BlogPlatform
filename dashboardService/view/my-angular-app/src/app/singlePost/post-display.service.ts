@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Post } from './post.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PostService {
+  private apiURL = 'http://localhost:8080/api/posts';
+
+  constructor(private http: HttpClient) {
+    //HttpClient dependency injected into the http private var
+  }
+
+  getPosts(): Observable<Post[]> { // return observable list of PostModel from backend
+    return this.http.get<Post[]>(this.apiURL); //get request using provided url
+  }
+}

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://127.0.0.1:3306/posts?permitMysqlScheme
+    url: jdbc:mariadb://127.0.0.1:3306/posts
     username: root
     password: 2589
     driver-class-name: org.mariadb.jdbc.Driver

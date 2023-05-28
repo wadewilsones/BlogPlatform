@@ -25,6 +25,6 @@ public class PostController {
     /**Get method to display all posts*/
     @GetMapping
     public List<PostModel> getPosts(){
-        return postRepository.findAll();
+        return postsRepo.findAll();
     }
 }
