@@ -1,6 +1,5 @@
-
 //Create model for post
-export interface Post {
+export interface Side {
 
   id: number;
   postTitle: string;
@@ -8,9 +7,9 @@ export interface Post {
   createdDate: Date;
   updatedDate: Date;
   authorId: number;
-  pic: string
+  pic: string;
   tag: string;
   category: number;
-}
 
+}
 

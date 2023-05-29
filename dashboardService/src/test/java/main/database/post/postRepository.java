@@ -1,7 +1,9 @@
 package main.database.post;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
-import main.database.post.PostModel;
 
 import java.util.List;
 
@@ -10,7 +12,7 @@ import java.util.List;
 @Repository
 public interface postRepository extends JpaRepository<PostModel, Integer>{
 
-    /**Get all Posts**/
-     List<PostModel> findAll();
+     /**Get posts to separate by categories**/
+     List<PostModel> findByCategory(int category);
 
 }

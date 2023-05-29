@@ -27,27 +27,34 @@ public class PostModel {
     @CreationTimestamp
     private Date updatedDate;
     private int authorId;
-    //String tags;
     private Blob pic;
+    @Column(name = "tag")
+    private String tag;
+    @Column(name = "category")
+    private int category;
 
 
     //Constructors
     public PostModel(){}
-    public PostModel(String postTitle, String content, int authorId, Blob pic){
+    public PostModel(String postTitle, String content, int authorId, Blob pic, String tag, int category){
 
         this.postTitle = postTitle;
         this.post_content = content;
         this.authorId = authorId;
         this.pic = pic;
+        this.tag = tag;
+        this.category = category;
 
     }
 
     //Update Post
 
-    public void updatePost(String postTitle, String content, Blob pic){
+    public void updatePost(String postTitle, String content, Blob pic, String tags, int category){
 
         setPostTitle(postTitle);
         setContent(content);
+        setTags(tags);
+        setCategory(category);
         setPic(pic);
 
     }
@@ -81,6 +88,14 @@ public class PostModel {
         return pic;
     }
 
+    public String getTags(){
+        return this.tag;
+    }
+
+    public int getCategory(){
+        return this.category;
+    }
+
     /** Setters **/
     public void setPostTitle(String postTitle) {
         this.postTitle = postTitle;
@@ -88,6 +103,17 @@ public class PostModel {
 
     public void setContent(String content) {
         this.post_content = content;
+    }
+
+    /** Setters **/
+    public void setCategory(int category) {
+
+        this.category = category;
+    }
+
+    public void setTags(String tags) {
+
+        this.tag = tags;
     }
 
     public void setPic(Blob pic) {

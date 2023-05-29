@@ -7,7 +7,7 @@ import { Post } from './post.model';
   providedIn: 'root'
 })
 export class PostService {
-  private apiURL = 'http://localhost:8080/api/posts';
+  private apiURL = 'http://localhost:8080/api/posts/recentPosts';
 
   constructor(private http: HttpClient) {
     //HttpClient dependency injected into the http private var

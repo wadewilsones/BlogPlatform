@@ -1,3 +1,4 @@
 /target/
 main/resources/application.yml
 .idea/
+src/java/main/resources/META-INF/

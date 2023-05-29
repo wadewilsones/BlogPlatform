@@ -22,9 +22,18 @@ public class PostController {
         this.postsRepo = postsRepo;
     }
 
-    /**Get method to display all posts*/
-    @GetMapping
+    /**Get method to display recent posts*/
+    @GetMapping("/recentPosts")
     public List<PostModel> getPosts(){
-        return postsRepo.findAll();
+
+        return postsRepo.findByCategory(2);
+    }
+
+    /**Get method to display popular posts*/
+    @GetMapping("/popularPosts")
+    public List<PostModel> getPopularPosts(){
+
+        return postsRepo.findByCategory(1);
     }
 }
+
