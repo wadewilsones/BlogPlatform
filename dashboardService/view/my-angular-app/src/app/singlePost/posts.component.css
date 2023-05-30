@@ -75,14 +75,38 @@
       align-items:center;
       justify-content: space-between;
     }
+
     .postTags div{
-      display: flex;
-      align-items:center;
+      display:flex;
       justify-content: left;
-      gap:3%;
+      gap:5%;
     }
 
-    .postTags div p{
+    .tagsContainer{
+
+      display: flex;
+      align-items: center;
+      border-radius:10px;
+      width:50%;
+      padding:20px 30px 10px 10px;
+    }
+
+    .tagsContainer h5{
+      font-size:0.9em;
+      text-transform: uppercase;
+      font-weight:500;
+    }
+
+    .tagsContainer div p{
+       background-color:#B6B0B9;
+      padding:0.6em 1em;
+      color:white;
+      cursor:pointer;
+      border-radius:10px;
+
+    }
+
+    .postTags .tag p{
       background-color:#9673BB;
       padding:0.6em 1em;
       color:white;
@@ -90,7 +114,7 @@
       border-radius:10px;
     }
 
-    .postTags div p:hover{
+    .postTags .tag p:hover{
        background-color:#D3C4E3;
        color:black;
     }

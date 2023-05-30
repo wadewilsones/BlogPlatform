@@ -68,6 +68,11 @@
       border-radius: 5px;
     }
 
+    .searchSection form input[type="submit"]:hover{
+       background-color:#D3C4E3;
+       color:black;
+    }
+
     /*LOGIN*/
     .tabletMenuSection{
         display:none
@@ -85,6 +90,11 @@
       font-size:1.6em;
       cursor:pointer;
       margin-right:0.4em;
+    }
+
+    .loginIcon:hover{
+      background-color:#D3C4E3;
+      color:black;
     }
 
     .loginContainer h5{

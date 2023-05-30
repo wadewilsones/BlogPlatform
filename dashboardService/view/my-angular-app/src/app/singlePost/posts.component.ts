@@ -25,7 +25,10 @@ export class PostsComponent implements OnInit {
 
   getPosts(): void {
     this.postService.getPosts()
-      .subscribe(posts => this.posts = posts);
+      .subscribe(posts => this.posts = posts);}
 
+
+  separateTags(tags:string):string[]{
+    return tags.split(',');
   }
 }

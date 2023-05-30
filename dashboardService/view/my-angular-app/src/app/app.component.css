@@ -58,6 +58,22 @@
           border: 2px solid #E0E0E0;
       }
 
+      .tagInputContainer input[type="submit"]{
+          color:white;
+          border:none;
+          background-color: #9673BB;
+          cursor:pointer;
+          width:130px;
+          border-radius: 5px;
+      }
+
+      .tagInputContainer input[type="submit"]:hover{
+
+       background-color:#D3C4E3;
+       color:black;
+
+      }
+
       .tagsIcons{
         display:flex;
         width:90%;

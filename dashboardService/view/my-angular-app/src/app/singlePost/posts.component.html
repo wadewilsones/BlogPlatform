@@ -13,8 +13,20 @@
         {{ post.content }}
       </p>
     </section>
-    <section class="postTags">
-      <app-tags></app-tags>
+    <section class="postTags" >
+      <div class="tagsContainer">
+        <h5>Tags:</h5>
+
+        <div *ngIf="post.tags != null" class="tag">
+          <p *ngFor="let tag of separateTags(post.tags)">{{ tag }}</p>
+        </div>
+
+        <div *ngIf="post.tags == null">
+          <p>No tags</p>
+        </div>
+
+      </div>
+
       <button>Read More</button>
     </section>
 

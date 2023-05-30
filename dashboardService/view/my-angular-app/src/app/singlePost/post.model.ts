@@ -9,7 +9,7 @@ export interface Post {
   updatedDate: Date;
   authorId: number;
   pic: string
-  tag: string;
+  tags: string;
   category: number;
 }
 
