@@ -15,4 +15,8 @@ public interface postRepository extends JpaRepository<PostModel, Integer>{
      /**Get posts to separate by categories**/
      List<PostModel> findByCategory(int category);
 
+     /**Get filtered by tag posts**/
+     List<PostModel> findByTagContaining(String tag);
+
+
 }

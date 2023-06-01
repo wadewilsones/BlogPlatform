@@ -25,7 +25,8 @@ import { TagsComponent } from './tags/tags.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+  PostsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

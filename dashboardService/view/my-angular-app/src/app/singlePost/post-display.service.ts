@@ -16,4 +16,10 @@ export class PostService {
   getPosts(): Observable<Post[]> { // return observable list of PostModel from backend
     return this.http.get<Post[]>(this.apiURL); //get request using provided url
   }
+
+filterTags(tag: string): Observable<Post[]> {
+  return this.http.get<Post[]>(`http://localhost:8080/api/posts/filteredPosts?tag=${tag}`);
+}
+
+
 }

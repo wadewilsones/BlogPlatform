@@ -7,12 +7,12 @@
     </aside>
 
     <section class="postFeed">
-      <div class="tagInputContainer">
+      <form class="tagInputContainer" (submit) = "postsComponent.ChangePosts($event, tag.value)">
         <h2>TAGS</h2>
-        <input type="search" placeholder="Type tag name..">
-        <input type="submit" value="Filter">
-      </div>
-      <app-posts></app-posts>
+        <input type="search" placeholder="Type tag name.." #tag>
+        <input type="submit" value="Filter" >
+      </form>
+      <app-posts #postsComponentRef></app-posts>
     </section>
   </main>
 

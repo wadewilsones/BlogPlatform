@@ -1,9 +1,6 @@
 package main.database.post;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,6 +31,11 @@ public class PostController {
     public List<PostModel> getPopularPosts(){
 
         return postsRepo.findByCategory(1);
+    }
+
+    @GetMapping("/filteredPosts")
+    public List<PostModel> filterPosts(@RequestParam("tag") String tag){
+        return postsRepo.findByTagContaining(tag);
     }
 }
 

@@ -1,4 +1,4 @@
-<article class="singlePostContainer" *ngFor="let post of posts">
+ <article class="singlePostContainer" *ngFor="let post of posts">
     <section class="postHeader">
       <div>
         <img src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png">
@@ -18,7 +18,7 @@
         <h5>Tags:</h5>
 
         <div *ngIf="post.tags != null" class="tag">
-          <p *ngFor="let tag of separateTags(post.tags)">{{ tag }}</p>
+          <p *ngFor="let tag of separateTags(post.tags)"  (click) = "ChangePosts($event, tag)">{{ tag }}</p>
         </div>
 
         <div *ngIf="post.tags == null">
@@ -30,5 +30,5 @@
       <button>Read More</button>
     </section>
 
+  </article>
 
-</article>
