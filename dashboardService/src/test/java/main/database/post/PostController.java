@@ -33,9 +33,16 @@ public class PostController {
         return postsRepo.findByCategory(1);
     }
 
+    /**Return filtered by a tag posts**/
     @GetMapping("/filteredPosts")
     public List<PostModel> filterPosts(@RequestParam("tag") String tag){
         return postsRepo.findByTagContaining(tag);
+    }
+
+    /**Return a post with a certain Name**/
+    @GetMapping("/searchPosts")
+    public List<PostModel> findByPostTitleContaining(@RequestParam("name") String title){
+        return postsRepo.findByPostTitleContaining(title);
     }
 }
 

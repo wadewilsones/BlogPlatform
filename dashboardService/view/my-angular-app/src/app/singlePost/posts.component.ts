@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef, Input } from '@angular/core';
 import { Post } from './post.model';
 import { PostService } from './post-display.service';
 import { DatePipe } from '@angular/common';
-import { Observable, of, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,9 +11,10 @@ import { Observable, of, Subscription } from 'rxjs';
   styleUrls: ['./posts.component.css']
 })
 
-export class PostsComponent implements OnInit, OnDestroy {
+export class PostsComponent implements OnInit {
   posts: Post[] = [];
-  private subscription: Subscription = new Subscription();
+  //Hold value for search by title
+  @Input() postTitleSearchValue = "";
 
   constructor(
     private postService: PostService,
@@ -26,7 +27,7 @@ export class PostsComponent implements OnInit, OnDestroy {
 
 //Display all posts
   getPosts(): void {
-    this.subscription = this.postService.getPosts().subscribe(posts => {
+    this.postService.getPosts().subscribe(posts => {
       this.posts = posts;
       this.changeDetectorRef.detectChanges();
     });
@@ -41,7 +42,7 @@ export class PostsComponent implements OnInit, OnDestroy {
       });
   }
 
-  //Display posts that are relevant for a input tag (app component form submittion)
+  //Display posts that are relevant for a input tag (app component form submit)
   getFilteredPosts(tag: string): void {
     this.postService.filterTags(tag).subscribe(posts => {
       this.posts = posts;
@@ -49,13 +50,19 @@ export class PostsComponent implements OnInit, OnDestroy {
     });
   }
 
+  // Posts by Name
+
+  getPostsByName(name: string): void{
+   this.postService.getPostByName(name).subscribe(posts => {
+        this.posts = posts;
+        this.changeDetectorRef.detectChanges();
+      });
+
+  }
+
   // Separate string of tags from backend
   separateTags(tags: string): string[] {
     return tags.split(',');
   }
-
-    ngOnDestroy(): void {
-      this.subscription.unsubscribe();
-    }
 
 }

@@ -1,4 +1,4 @@
- <app-header></app-header>
+ <app-header (startSearch)="handleHeaderSearchSubmit($event)"></app-header>
 
    <main class="homeCointainer">
     <aside class="sidePosts">
@@ -12,7 +12,7 @@
         <input type="search" placeholder="Type tag name.." #tag>
         <input type="submit" value="Filter" >
       </form>
-      <app-posts #postsComponentRef></app-posts>
+      <app-posts [postTitleSearchValue] = "postName" #postsComponentRef></app-posts>
     </section>
   </main>
 

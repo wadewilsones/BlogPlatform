@@ -8,8 +8,8 @@
    </section>
 
     <section class="searchSection">
-      <form>
-        <input type="search" placeholder="Search Post...">
+      <form (submit)="getPostName($event)">
+        <input type="search" placeholder="Search Post..." #postName>
         <input type="submit" value="Search">
       </form>
 

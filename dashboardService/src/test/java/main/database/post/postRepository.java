@@ -18,5 +18,9 @@ public interface postRepository extends JpaRepository<PostModel, Integer>{
      /**Get filtered by tag posts**/
      List<PostModel> findByTagContaining(String tag);
 
+     /**Search Post by names**/
+
+     List<PostModel> findByPostTitleContaining(String title);
+
 
 }

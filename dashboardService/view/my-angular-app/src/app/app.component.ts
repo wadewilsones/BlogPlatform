@@ -10,10 +10,19 @@ import { PostsComponent } from './singlePost/posts.component'
 export class AppComponent {
   title = 'my-angular-app';
   @ViewChild(PostsComponent) postsComponent!: PostsComponent;
+  @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
+  searchTitle: string = " ";
+
   //Constructor for dependency injection
-  constructor(private postComponent: PostsComponent, private changeDetectorRef: ChangeDetectorRef){}
+  constructor( private changeDetectorRef: ChangeDetectorRef){}
 
-  ngAfterViewInit(){}
+  //Handle search by title
 
+  postName: string = '';
+
+  handleHeaderSearchSubmit(postName: string){
+    this.postName = postName;
+    this.postsComponent.getPostsByName(postName);
+  }
 
 }
