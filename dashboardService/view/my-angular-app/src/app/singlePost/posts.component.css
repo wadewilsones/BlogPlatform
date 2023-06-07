@@ -5,7 +5,7 @@
   /**POST HEADER**/
   .singlePostContainer{
     width:500px;
-    margin:2em auto;
+    margin:3em auto;
     padding:1em 3em;
     border-radius:10px;
     background-color:#F2F2F2;
@@ -133,6 +133,22 @@
       color:black;
     }
 
+    /*IF NO POSTS*/
+
+    .EmptyPostsContainer{
+    border-radius: 50px;
+    background-color: #F3F3F3;
+    color: #B3B1B4;
+    width:90%;
+    margin:15em auto 40vh;
+    padding:10em 0;
+
+    }
+
+   .EmptyPostsContainer{
+
+   text-align:center;
+   }
 }
 
 
@@ -247,4 +263,18 @@
       color:black;
     }
 
+
+    /*IF NO POSTS*/
+
+    .EmptyPostsContainer{
+    border-radius: 50px;
+    background-color: #F3F3F3;
+    color: #B3B1B4;
+    width:90%;
+    }
+
+   .EmptyPostsContainer{
+
+   text-align:center;
+   }
 }

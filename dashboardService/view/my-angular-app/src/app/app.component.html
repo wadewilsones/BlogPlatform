@@ -1,17 +1,28 @@
  <app-header (startSearch)="handleHeaderSearchSubmit($event)"></app-header>
 
    <main class="homeCointainer">
+
     <aside class="sidePosts">
       <h2>POPULAR POSTS</h2>
       <app-side></app-side>
     </aside>
 
+
     <section class="postFeed">
-      <form class="tagInputContainer" (submit) = "postsComponent.ChangePosts($event, tag.value)">
+      <form class="tagInputContainer" (submit) = "tagSubmit($event, tag.value)">
         <h2>TAGS</h2>
         <input type="search" placeholder="Type tag name.." #tag>
         <input type="submit" value="Filter" >
       </form>
+      <section *ngIf="submittedTag != '' " >
+        <div class="selectedTagContainer">
+          <p class="inputTag">{{ submittedTag }}</p>
+          <mat-icon class="closeIcon" (click) = "clearTags($event)">close</mat-icon>
+        </div>
+
+
+      </section>
+
       <app-posts [postTitleSearchValue] = "postName" #postsComponentRef></app-posts>
     </section>
   </main>

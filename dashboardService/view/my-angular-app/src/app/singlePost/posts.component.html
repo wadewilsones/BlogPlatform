@@ -1,4 +1,5 @@
- <article class="singlePostContainer" *ngFor="let post of posts">
+<div *ngIf = "posts.length > 0">
+  <article class="singlePostContainer"*ngFor="let post of posts">
     <section class="postHeader">
       <div>
         <img src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png">
@@ -29,6 +30,11 @@
 
       <button>Read More</button>
     </section>
-
   </article>
+</div>
+<div *ngIf = "posts.length == 0">
+  <section class="EmptyPostsContainer">
+    <h1>No posts with such parameters were found</h1>
+  </section>
+</div>
 
