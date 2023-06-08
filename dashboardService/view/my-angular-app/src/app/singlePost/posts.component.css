@@ -176,7 +176,7 @@
        display:flex;
        align-items:center;
        justify-content:space-between;
-       width:120px;
+       width:140px;
        margin:0;
      }
 
@@ -271,10 +271,9 @@
     background-color: #F3F3F3;
     color: #B3B1B4;
     width:90%;
+    height:50vh;
+    margin:5em auto;
+   text-align:center;
     }
 
-   .EmptyPostsContainer{
-
-   text-align:center;
-   }
 }
